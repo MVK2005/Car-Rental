@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-m-4">
+            <div class="card" style="width: 18rem;">
+              <img src="{{car.picture}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                   <h5 class="card-title">{{car.make}} {{car.model}}</h5>
+                   <p class="card-text">{{car.pricePerWeek}}/week</p>
+                   <p class="card-text">{{car.pricePerHour}}/hour</p>
+                   <a href="/displayCar/{{car._id}}" class="btn btn-primary">Contact Owner</a>
+              </div>
+            </div>
+       </div>
+       <div class="col-sm-4">
+           <form acion="/chargeRenter/{{budget._id}}" method="POST">
+           <script> src="https://checkout.stripe.com/checkout.js" data-key="{{StripePublishableKey}}" class="stripe-button" data-amount="{{stripeTotal}}" data-name="Car Rental" data-description="${{budget.total}} for renting a {{car.make}} {{car.model}}" data-iamge="/image/logo.jpg"</script>
+           <div class="form-group">
+               <label for="hour">Total is {{budget.total}}</label>
+               <div class="form-group">
+               </div>
+           </div>
+           </form>
+       </div>
+    </div>
+</div>

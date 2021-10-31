@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-3"></div>
+        <div class="col-sm-7">
+
+            <form action="/signup" method="POST">
+            {{#each errors}}
+            <div class="alert alert-danger">
+                <a href="#" class="close" data-dismiss="alert" 
+                aria-label="close">&times;</a>
+                {{text}}
+            </div>
+            {{/each}}
+
+    <div class="form-group">
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" value="{{firstname}}" 
+        id="firstname" class="form-control">
+    </div>  
+
+    <div>
+        <div class="form-group">
+        <label for="lastname">lastname</label>
+        <input type="text" name="lastname" value="{{lastname}}"
+         id="lastname" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" value="{{email}}"
+         id="email" class="form-control">
+    </div>
+    
+    <div>
+        <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" value="{{password}}"
+         id="password" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <div class="form-group">
+        <label for="password2">Confirm Password</label>
+        <input type="password" name="password2" value="{{password2}}" 
+        id="password2" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+    
+    </form>
+        <div class="col-sm"></div>
